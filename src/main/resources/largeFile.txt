@@ -1,0 +1,19 @@
+Java Multithreading Overview
+Java multithreading allows a program to execute multiple threads concurrently, enabling tasks to run in parallel, improving performance, and ensuring better resource utilization, especially in multi-core processors.
+
+What is a Thread?
+A thread is a lightweight process, the smallest unit of execution in a program. In Java, a thread is an instance of the Thread class or implements the Runnable interface. Every Java program has at least one thread, known as the main thread, which is created by the JVM when the program starts.
+
+Benefits of Multithreading
+Improved Performance: By dividing a task into smaller threads, the program can utilize multiple cores and achieve parallelism.
+Responsiveness: Multithreading can improve the responsiveness of applications (especially UI-heavy applications) by performing background tasks without blocking the main thread.
+Resource Sharing: Threads within the same process share the same memory space, which allows them to easily share data and communicate.
+Thread Lifecycle
+A thread in Java has several states during its lifecycle. These states can be seen in the Thread.State enumeration:
+
+New: The thread is created but not yet started.
+Runnable: After calling start(), the thread is ready to run or is running, depending on the OS scheduler.
+Blocked: The thread is blocked, waiting for a monitor lock to access a synchronized block/method.
+Waiting: The thread is waiting indefinitely for another thread to perform a particular action (e.g., calling wait(), join(), or sleep()).
+Timed Waiting: Similar to the waiting state, but the thread is waiting for a specific amount of time (e.g., join(millis) or sleep(millis)).
+Terminated: The thread has finished execution and is no longer alive.
